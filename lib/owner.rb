@@ -58,7 +58,8 @@ class Owner
 
   def sell_pets
     # Owner sells all its pets, changing all pets' moods to "nervous"
-    self.pets.each_value { |pet| pet.mood = "nervous" }
+    self.pets.each_value do |pets|
+      pets.each {|pet| pet.mood = "nervous" }
     @pets.clear
   end
 
